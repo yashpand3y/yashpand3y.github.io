@@ -202,12 +202,18 @@ input, select, textarea {
 		font-size: 2.25rem;
 		line-height: 1.3;
 		letter-spacing: 0.5rem;
+		word-wrap: break-word; 
+		overflow-wrap: break-word;
+		max-width: 100%;
 	}
 
 	h2 {
 		font-size: 1.5rem;
 		line-height: 1.4;
 		letter-spacing: 0.5rem;
+		word-wrap: break-word; 
+		overflow-wrap: break-word;
+		max-width: 100%;
 	}
 
 	h3 {
@@ -223,19 +229,27 @@ input, select, textarea {
 	}
 
 	h6 {
-		font-size: 0.6rem;
+		font-size: 0.5vw;
 	}
 
 	@media screen and (max-width: 736px) {
 
 		h1 {
 			font-size: 1.75rem;
+			/* font-size: 4vw; */
 			line-height: 1.4;
+			word-wrap: break-word; 
+    		overflow-wrap: break-word;
+			max-width: 100%;
 		}
 
 		h2 {
-			font-size: 1.25em;
+			font-size: 1.25rem;
+			/* font-size: 3vw; */
 			line-height: 1.5;
+			word-wrap: break-word; 
+    		overflow-wrap: break-word;
+			max-width: 100%;
 		}
 
 	}
@@ -720,6 +734,81 @@ input, select, textarea {
 
 		}
 
+		.circular-image {
+			width: 115px; /* Adjust the size as needed */
+			height: 115px; /* Ensure the height is the same as the width for a perfect circle */
+			object-fit: cover; /* Ensures the image covers the entire area */
+			object-position: center; /* Centers the image within the container */
+			border-radius: 50%; /* Creates the circular shape */
+			overflow: hidden; /* Ensures any overflow is hidden */
+		}
+		@media screen and (max-width: 1680px) {
+
+			.circular-image {
+				width: 86px; /* Adjust the size as needed */
+				height: 86px; /* Ensure the height is the same as the width for a perfect circle */
+				object-fit: cover; /* Ensures the image covers the entire area */
+				object-position: center; /* Centers the image within the container */
+				border-radius: 50%; /* Creates the circular shape */
+				overflow: hidden; /* Ensures any overflow is hidden */
+			}
+		}
+		@media screen and (max-width: 1280px) {
+
+			.circular-image {
+				width: 86px; /* Adjust the size as needed */
+				height: 86px; /* Ensure the height is the same as the width for a perfect circle */
+				object-fit: cover; /* Ensures the image covers the entire area */
+				object-position: center; /* Centers the image within the container */
+				border-radius: 50%; /* Creates the circular shape */
+				overflow: hidden; /* Ensures any overflow is hidden */
+			}
+		}
+		@media screen and (max-width: 980px) {
+
+			.circular-image {
+				width: 85px; /* Adjust the size as needed */
+				height: 86px; /* Ensure the height is the same as the width for a perfect circle */
+				object-fit: cover; /* Ensures the image covers the entire area */
+				object-position: center; /* Centers the image within the container */
+				border-radius: 50%; /* Creates the circular shape */
+				overflow: hidden; /* Ensures any overflow is hidden */
+			}
+		}
+		@media screen and (max-width: 736px) {
+
+			.circular-image {
+				width: 66px; /* Adjust the size as needed */
+				height: 68px; /* Ensure the height is the same as the width for a perfect circle */
+				object-fit: cover; /* Ensures the image covers the entire area */
+				object-position: center; /* Centers the image within the container */
+				border-radius: 50%; /* Creates the circular shape */
+				overflow: hidden; /* Ensures any overflow is hidden */
+			}
+		}
+		@media screen and (max-width: 480px) {
+
+			.circular-image {
+				width: 65px; /* Adjust the size as needed */
+				height: 68px; /* Ensure the height is the same as the width for a perfect circle */
+				object-fit: cover; /* Ensures the image covers the entire area */
+				object-position: center; /* Centers the image within the container */
+				border-radius: 50%; /* Creates the circular shape */
+				overflow: hidden; /* Ensures any overflow is hidden */
+			}
+		}
+		@media screen and (max-width: 360px) {
+
+			.circular-image {
+				width: 60px; /* Adjust the size as needed */
+				height: 60px; /* Ensure the height is the same as the width for a perfect circle */
+				object-fit: cover; /* Ensures the image covers the entire area */
+				object-position: center; /* Centers the image within the container */
+				border-radius: 50%; /* Creates the circular shape */
+				overflow: hidden; /* Ensures any overflow is hidden */
+			}
+		}
+
 /* List */
 
 	ol {
@@ -1140,9 +1229,12 @@ input, select, textarea {
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
 			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
-			background-size: auto, 256px 256px;
-			background-position: center, center;
-			background-repeat: no-repeat, repeat;
+			background-size: auto,
+ 256px 256px;
+			background-position: center,
+ center;
+			background-repeat: no-repeat,
+ repeat;
 			z-index: 2;
 		}
 
@@ -1617,7 +1709,26 @@ input, select, textarea {
 			#main article {
 				padding: 3rem 1.5rem 0.5rem 1.5rem ;
 			}
+			
+		}
 
+		/* Responsive Video Container */
+		.video-container {
+			position: relative;
+			padding-bottom: 56.25%; /* 16:9 aspect ratio */
+			height: 0;
+			overflow: hidden;
+			max-width: 100%;
+			background: #000;
+		}
+
+		.video-container iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border: 0;
 		}
 
 /* Footer */
