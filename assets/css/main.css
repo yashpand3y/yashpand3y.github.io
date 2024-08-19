@@ -735,77 +735,77 @@ input, select, textarea {
 		}
 
 		.circular-image {
-			width: 115px; /* Adjust the size as needed */
-			height: 115px; /* Ensure the height is the same as the width for a perfect circle */
-			object-fit: cover; /* Ensures the image covers the entire area */
-			object-position: center; /* Centers the image within the container */
-			border-radius: 50%; /* Creates the circular shape */
-			overflow: hidden; /* Ensures any overflow is hidden */
+			width: 115px; 
+			height: 115px;
+			object-fit: cover; 
+			object-position: center; 
+			border-radius: 50%; 
+			overflow: hidden; 
 		}
 		@media screen and (max-width: 1680px) {
 
 			.circular-image {
-				width: 86px; /* Adjust the size as needed */
-				height: 86px; /* Ensure the height is the same as the width for a perfect circle */
-				object-fit: cover; /* Ensures the image covers the entire area */
-				object-position: center; /* Centers the image within the container */
-				border-radius: 50%; /* Creates the circular shape */
-				overflow: hidden; /* Ensures any overflow is hidden */
+				width: 86px; 
+				height: 86px;
+				object-fit: cover;
+				object-position: center; 
+				border-radius: 50%; 
+				overflow: hidden;
 			}
 		}
 		@media screen and (max-width: 1280px) {
 
 			.circular-image {
-				width: 86px; /* Adjust the size as needed */
-				height: 86px; /* Ensure the height is the same as the width for a perfect circle */
-				object-fit: cover; /* Ensures the image covers the entire area */
-				object-position: center; /* Centers the image within the container */
-				border-radius: 50%; /* Creates the circular shape */
-				overflow: hidden; /* Ensures any overflow is hidden */
+				width: 86px; 
+				height: 86px;
+				object-fit: cover; 
+				object-position: center; 
+				border-radius: 50%; 
+				overflow: hidden; 
 			}
 		}
 		@media screen and (max-width: 980px) {
 
 			.circular-image {
-				width: 85px; /* Adjust the size as needed */
-				height: 86px; /* Ensure the height is the same as the width for a perfect circle */
-				object-fit: cover; /* Ensures the image covers the entire area */
-				object-position: center; /* Centers the image within the container */
-				border-radius: 50%; /* Creates the circular shape */
-				overflow: hidden; /* Ensures any overflow is hidden */
+				width: 85px; 
+				height: 86px;
+				object-fit: cover;
+				object-position: center; 
+				border-radius: 50%; 
+				overflow: hidden; 
 			}
 		}
 		@media screen and (max-width: 736px) {
 
 			.circular-image {
-				width: 66px; /* Adjust the size as needed */
-				height: 68px; /* Ensure the height is the same as the width for a perfect circle */
-				object-fit: cover; /* Ensures the image covers the entire area */
-				object-position: center; /* Centers the image within the container */
-				border-radius: 50%; /* Creates the circular shape */
-				overflow: hidden; /* Ensures any overflow is hidden */
+				width: 66px; 
+				height: 68px;
+				object-fit: cover; 
+				object-position: center;
+				border-radius: 50%;
+				overflow: hidden;
 			}
 		}
 		@media screen and (max-width: 480px) {
 
 			.circular-image {
-				width: 65px; /* Adjust the size as needed */
-				height: 68px; /* Ensure the height is the same as the width for a perfect circle */
-				object-fit: cover; /* Ensures the image covers the entire area */
-				object-position: center; /* Centers the image within the container */
-				border-radius: 50%; /* Creates the circular shape */
-				overflow: hidden; /* Ensures any overflow is hidden */
+				width: 65px; 
+				height: 68px;
+				object-fit: cover; 
+				object-position: center; 
+				border-radius: 50%;
+				overflow: hidden;
 			}
 		}
 		@media screen and (max-width: 360px) {
 
 			.circular-image {
-				width: 60px; /* Adjust the size as needed */
-				height: 60px; /* Ensure the height is the same as the width for a perfect circle */
-				object-fit: cover; /* Ensures the image covers the entire area */
-				object-position: center; /* Centers the image within the container */
-				border-radius: 50%; /* Creates the circular shape */
-				overflow: hidden; /* Ensures any overflow is hidden */
+				width: 60px; 
+				height: 60px;
+				object-fit: cover; 
+				object-position: center; 
+				border-radius: 50%;
+				overflow: hidden;
 			}
 		}
 
