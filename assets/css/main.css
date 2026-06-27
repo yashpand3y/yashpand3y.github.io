@@ -612,6 +612,132 @@ input, select, textarea {
 			padding: 0;
 		}
 
+/* ========================================================================== */
+/* Project Grid Layout (3 Columns)                                            */
+/* ========================================================================== */
+
+	.project-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.5rem;
+		margin-top: 1.5rem;
+	}
+
+	/* Mobile & Tablet Responsiveness */
+	@media screen and (max-width: 1280px) {
+		.project-grid { grid-template-columns: repeat(2, 1fr); }
+	}
+	@media screen and (max-width: 736px) {
+		.project-grid { grid-template-columns: 1fr; }
+	}
+
+	/* The Clickable Rounded Box */
+	.project-card {
+		background-color: rgba(255, 255, 255, 0.05);
+		border: 1px solid rgba(255, 255, 255, 0.15);
+		border-radius: 12px;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		cursor: pointer;
+		transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+	}
+
+	.project-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+		background-color: rgba(255, 255, 255, 0.08);
+	}
+
+	/* Make the invisible link cover the whole card */
+	.project-card a.hidden-link {
+		position: absolute;
+		top: 0; left: 0; right: 0; bottom: 0;
+		z-index: 10;
+	}
+
+	.project-card-inner {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+
+	/* Cover Image */
+	.project-cover {
+		display: block;
+		width: 100%;
+		height: 180px;
+		overflow: hidden;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+	}
+
+	.project-cover img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform 0.4s ease;
+	}
+
+	.project-card:hover .project-cover img {
+		transform: scale(1.08);
+	}
+
+	/* Card Content Area */
+	.project-content {
+		padding: 1.5rem;
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+	}
+
+	.project-content h3 {
+		margin-bottom: 0.25rem;
+		border-bottom: none;
+	}
+
+	.project-date {
+		font-size: 0.8rem;
+		opacity: 0.6;
+		margin-bottom: 1rem;
+		display: block;
+	}
+
+	.project-content p {
+		margin-bottom: 0;
+		font-size: 0.85rem;
+		line-height: 1.5;
+	}
+
+	/* Ensure wide video containers look good inside articles */
+	.article-wide {
+		width: 50rem !important; /* Slightly wider than standard 40rem for videos */
+	}
+/* Text-Only Project Cards (For "Other Projects")                             */
+
+	.project-card.text-only {
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		padding: 3rem 1.5rem;
+	}
+
+	.project-card.text-only .project-content {
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.project-card.text-only h3 {
+		font-size: 1.25rem;
+		margin-bottom: 0.5rem;
+		line-height: 1.4;
+	}
+
+	.project-card.text-only .project-date {
+		margin-bottom: 0;
+	}
 /* Icon */
 
 	.icon {
@@ -650,6 +776,25 @@ input, select, textarea {
 		}
 
 /* Image */
+
+		.banner-container {
+			position: relative;
+			width: 100%;
+			/* Aspect ratio: 182 / 786 = ~23.155% */
+			padding-top: 23.155%; 
+			overflow: hidden;
+			margin-bottom: 2em;
+			background-color: #ffffff; /* Matches your site background */
+		}
+
+		.banner-container img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: contain; /* Shrinks the image to fit entirely */
+		}
 
 	.image {
 		border-radius: 4px;

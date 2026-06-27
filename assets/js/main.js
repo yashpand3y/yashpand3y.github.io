@@ -291,12 +291,16 @@
 
 				var $this = $(this);
 
-				// Close.
-					$('<div class="close">Close</div>')
-						.appendTo($this)
-						.on('click', function() {
+				// Close Button generation for ALL tabs.
+				$('<div class="close">Close</div>')
+					.appendTo($this)
+					.on('click', function() {
+						if ($this.attr('data-parent')) {
+							location.hash = $this.attr('data-parent');
+						} else {
 							location.hash = '';
-						});
+						}
+					});
 
 				// Prevent clicks from inside article from bubbling.
 					$this.on('click', function(event) {
@@ -308,9 +312,15 @@
 		// Events.
 			$body.on('click', function(event) {
 
-				// Article visible? Hide.
-					if ($body.hasClass('is-article-visible'))
+				// Article visible? Hide or route to parent.
+				if ($body.hasClass('is-article-visible')) {
+					var $active = $main_articles.filter('.active');
+					if ($active.attr('data-parent')) {
+						location.hash = $active.attr('data-parent');
+					} else {
 						$main._hide(true);
+					}
+				}
 
 			});
 
@@ -320,9 +330,15 @@
 
 					case 27:
 
-						// Article visible? Hide.
-							if ($body.hasClass('is-article-visible'))
+						// Article visible? Hide or route to parent.
+						if ($body.hasClass('is-article-visible')) {
+							var $active = $main_articles.filter('.active');
+							if ($active.attr('data-parent')) {
+								location.hash = $active.attr('data-parent');
+							} else {
 								$main._hide(true);
+							}
+						}
 
 						break;
 
